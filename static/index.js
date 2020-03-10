@@ -21,7 +21,7 @@ window.onload = () => {
       document.getElementById("list").appendChild(todoListItems);
   }
 
-  const todoItem = items => {
+  const todoItem = ({[items]}) => {
     const itemsMapped = items.title.map.document.createElement("li");
     const itemsMappedChecked = itemsMapped.checked.document.createElement(
       "INPUT"
