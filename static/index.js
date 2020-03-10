@@ -16,8 +16,8 @@ window.onload = () => {
     { title: "Take over the world", checked: true }
   ];
   const todoItem = items => {
-    const checkedItems = items.checked.document.createElement("input");
-    checkedItems.checked.setAttribute("type", "checkbox");
+    items.checked = document.createElement("input");
+    items.checked.setAttribute("type", "checkbox");
     document.createElement("span");
     const newItem = items.document.createElement("li");
     return document(newItem);
