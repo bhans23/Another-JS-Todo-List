@@ -26,8 +26,8 @@ window.onload = () => {
   
 
   const todoList = items => {
-    todoList = document.createElement('ul');
-    todoList.appendChild(items.map(todoItem))
+    const todoLists = document.createElement('ul');
+    todoLists.appendChild(items.map(todoItem))
     
   };
 
