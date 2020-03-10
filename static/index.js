@@ -15,20 +15,22 @@ window.onload = () => {
     { title: "Play video games", checked: false },
     { title: "Take over the world", checked: true }
   ];
-
-  const todoList = (todoItem) => {
-    const todoListItems = document.createElement("ul").appendChild(todoItem);
-      document.getElementById("list").appendChild(todoListItems);
-  }
-
-  const todoItem = ({[items]}) => {
-    const itemsMapped = items.title.map.document.createElement("li");
-    const itemsMappedChecked = itemsMapped.checked.document.createElement(
-      "INPUT"
-    );
-    itemsMappedChecked.setAttribute("type", "checkbox");
+  const todoItem = items => {
+    const checkedItems = items.checked.document.createElement("input");
+    checkedItems.checked.setAttribute("type", "checkbox");
+    document.createElement("span");
+    const newItem = items.document.createElement("li");
+    return document(newItem);
   };
 
-  document.todoList(todoItem)
   
+
+  const todoList = items => {
+    todoList = document.createElement('ul');
+    todoList.appendChild(items.map(todoItem))
+    
+  };
+
+  document.getElementById("list").appendChild(todoList(items));
+  document(todoItem(items))
 };
